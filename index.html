@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <img src="./Playstation_Img/logo.png" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Sevices</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+                <img src="./Playstation_Img/menu.png" class="menu-bar" onclick="togglemenu()">
+            </div>
+            <div class="row" id="all">
+                <div class="col-1">
+                    <h2>PS4 V2 <br>Dualshock 4</h2>
+                    <h3>Wireless Controller for PlayStation 4</h3>
+                    <p>(Compatible/Generic)</p>
+                    <h4>$32.50</h4>
+                    <button>Buy Now <img src="./Playstation_Img/arrow.png"></button>
+                </div>
+                <div class="col-2">
+                    <img src="./Playstation_Img/controller.png" class="controller">
+                    <div class="color-box"></div>
+                    <div class="add-btn">
+                        <img src="./Playstation_Img/add.png" alt="">
+                        <p><small>Add to cart</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var menulist = document.getElementById("menuList")
+            var All = document.getElementById('all')
+            menulist.style.maxHeight = "0px"
+            
+            function togglemenu(){
+                if(menulist.style.maxHeight == "0px"){
+                    menulist.style.maxHeight = "130px"
+                    // menulist.style.display = "block"
+                    All.style.transform="translateY(100px)"
+                    
+                }
+                else{
+                    menulist.style.maxHeight = "0px"
+                    // menulist.style.display = "none"
+                    All.style.transform="translateY(0px)"
+                }
+            }
+        </script>
+</body>
+
+</html>
